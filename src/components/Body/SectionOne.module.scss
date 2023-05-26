@@ -1,0 +1,21 @@
+@use "../../Ui-styles/mixins.scss" as *;
+
+.section-1 {
+  margin-top: 5.5rem;
+
+  .img-container {
+    @include img-containerFullWidth;
+  }
+  .mask-element {
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 0.9;
+  }
+  p {
+    max-width: 95%;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../Ui-styles/variables" as vars;
+@use "../Ui-styles/mixins.scss" as *;
+
+footer {
+  background-color: vars.$black;
+  color: vars.$white;
+  padding: 2.5rem 0;
+
+  & > div {
+    @include flex-column;
+    gap: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1;
+
+    span {
+      display: block;
+    }
+  }
+
+  p {
+    width: 85%;
+  }
+  .socials-img {
+    @include flex-row;
+    gap: 1rem;
+  }
+}

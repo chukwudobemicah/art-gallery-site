@@ -1,0 +1,37 @@
+@use "../../Ui-styles/variables.scss" as vars;
+
+.button-container {
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  height: 3.5rem;
+  cursor: pointer;
+
+  button {
+    width: 9rem;
+    background-color: vars.$black;
+    color: vars.$white;
+  }
+  .right-arrow-container {
+    background-color: vars.$brown;
+    transform: rotate(180deg);
+    display: inline-block;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a > div {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+  }
+  a {
+    text-decoration: none;
+  }
+  a > div,
+  a,
+  button {
+    height: 100%;
+  }
+}
