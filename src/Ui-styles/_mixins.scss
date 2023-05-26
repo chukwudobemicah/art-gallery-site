@@ -1,0 +1,16 @@
+@mixin img-containerFullWidth {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
