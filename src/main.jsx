@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 // import App from "./App";
 import App from "./App";
 // import Body from "./components/Body/Body";
-// import ErrorPage from "./components/pages/location/ErrorPage";
+import ErrorPage from "./components/pages/ErrorPage";
 // import Location from "./components/pages/location/Location";
 // import Home from "./components/Body/Home";
 
@@ -19,6 +19,7 @@ import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* <RouterProvider router={router} /> */}
     <App />
   </React.StrictMode>
 );

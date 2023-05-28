@@ -7,7 +7,6 @@ import Footer from "../Footer";
 const Home = () => {
   return (
     <Fragment>
-      <p>home</p>
       <Header />
       <Body />
       <Footer />
