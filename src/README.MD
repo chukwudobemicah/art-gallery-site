@@ -1,1 +1,0 @@
-ART gallery site.

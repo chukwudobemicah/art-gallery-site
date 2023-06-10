@@ -1,4 +1,4 @@
-import Wrapper from "../helpers components/wrapper";
+import Wrapper from "../helpers components/wrapper.jsx";
 import gridOneImg from "/assets/img/mobile/image-grid-2.jpg";
 import gridOneImgDesktop from "/assets/img/desktop/image-grid-2.jpg";
 import gridOneImgTab from "/assets/img/tablet/image-grid-2.jpg";
@@ -6,8 +6,36 @@ import gridTwoImg from "/assets/img/mobile/image-grid-3.jpg";
 import gridTwoImgDesktop from "/assets/img/desktop/image-grid-3.jpg";
 import gridTwoImgTab from "/assets/img/tablet/image-grid-3.jpg";
 import styles from "./SectionTwo.module.scss";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 const SectionTwo = () => {
+  const maskElRef = useRef(null);
+  useLayoutEffect(() => {
+    const maskEl = maskElRef.current;
+
+    const animation = gsap.fromTo(
+      maskEl,
+      {
+        yPercent: -150,
+      },
+      { yPercent: 0 }
+    );
+
+    ScrollTrigger.create({
+      trigger: maskEl,
+      start: "top 85%",
+      end: "bottom -10%",
+      onEnter: () => animation.restart(),
+      onEnterBack: () => animation.reverse(),
+      onLeave: () => animation.reverse(),
+      // onLeaveBack: () => animation.reverse(),
+      // markers: true,
+    });
+  }, []);
+
   return (
     <Wrapper>
       <section className={styles["section-2"]}>
@@ -56,7 +84,7 @@ const SectionTwo = () => {
         <div className={styles.content}>
           <div>
             <div className="mask-element">
-              <h2>
+              <h2 ref={maskElRef}>
                 Come & be <span>inspired</span>
               </h2>
             </div>

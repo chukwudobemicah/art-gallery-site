@@ -1,4 +1,37 @@
+@use "../../Ui-styles/mixins" as *;
+@use "../../Ui-styles/variables" as vars;
+
 .wrapper {
   width: 93%;
   margin: 0 auto;
+}
+
+.per-50 {
+  width: 50%;
+}
+.per-60 {
+  width: 60%;
+}
+.per-70 {
+  width: 70%;
+}
+.per-80 {
+  width: 80%;
+}
+.per-90 {
+  width: 90%;
+}
+.per-100 {
+  width: 100%;
+}
+
+@include responsive(vars.$tablet) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@include responsive(vars.$desktop) {
+  .wrapper {
+    width: 80%;
+  }
 }

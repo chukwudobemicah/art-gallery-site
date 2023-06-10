@@ -1,7 +1,10 @@
 import styles from "./Wrapper.module.scss";
 
+// This is an 93% default width wrapper
+
 const Wrapper = (props) => {
-  return <div className={styles.wrapper}>{props.children}</div>;
+  const classes = `${styles.wrapper} ${styles[`${props.className}`]}`;
+  return <div className={classes}>{props.children}</div>;
 };
 
 export default Wrapper;

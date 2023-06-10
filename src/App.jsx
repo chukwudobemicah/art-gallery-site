@@ -1,35 +1,14 @@
-import { Fragment } from "react";
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./components/Header";
-import Body from "./components/Body/Body";
+import { Fragment, useEffect } from "react";
 import "./resets.scss";
-import Footer from "./components/Footer";
-import Home from "./components/Body/Home";
-// import Location from "./components/pages/location/Location";
-// import car from "./components/car";
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Home />,
-//     errorElement: <ErrorPage />,
-//   },
-//   { path: "location", element: <Location /> },
-// ]);
-
-{
-  /* <RouterProvider router={router} /> */
-}
+import Home from "./components/Body/Home.jsx";
 
 const App = () => {
-  return <Home />;
-  // return (
-  //   <Fragment>
-  //     <Header />
-  //     <Body />
-  //     <Footer />
-  //   </Fragment>
-  // );
+  useEffect(() => {}, []);
+  return (
+    <Fragment>
+      <Home />
+    </Fragment>
+  );
 };
 
 export default App;

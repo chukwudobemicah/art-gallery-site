@@ -1,25 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import App from "./App";
-import App from "./App";
-// import Body from "./components/Body/Body";
-import ErrorPage from "./components/pages/ErrorPage";
-// import Location from "./components/pages/location/Location";
-// import Home from "./components/Body/Home";
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import App from "./App.jsx";
+import ErrorPage from "./components/pages/ErrorPage.jsx";
+import LocationPage from "./components/pages/location/LocationPage.jsx";
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Home />,
-//     errorElement: <ErrorPage />,
-//   },
-//   { path: "location", element: <Location /> },
-// ]);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "location",
+    element: <LocationPage />,
+    errorElement: <ErrorPage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <RouterProvider router={router} /> */}
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

@@ -5,21 +5,39 @@
   align-items: center;
   max-width: fit-content;
   height: 3.5rem;
+  // height: 100%;
+
   cursor: pointer;
 
   button {
-    width: 9rem;
+    width: fit-content;
     background-color: vars.$black;
     color: vars.$white;
+    cursor: pointer;
+    letter-spacing: 0.3rem;
+    font-size: 1.15em;
+    padding: 0 1.3rem;
+    // height: 100%;
+    // min-height: 100%;
   }
+
+  .home {
+    flex-direction: row-reverse;
+
+    .right-arrow-container {
+      transform: rotate(360deg);
+    }
+  }
+
   .right-arrow-container {
     background-color: vars.$brown;
     transform: rotate(180deg);
     display: inline-block;
-    padding: 1rem;
+    padding: 0 1.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
   }
   a > div {
     display: flex;

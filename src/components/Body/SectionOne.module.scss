@@ -1,10 +1,17 @@
 @use "../../Ui-styles/mixins.scss" as *;
+@use "../../Ui-styles/variables" as vars;
 
 .section-1 {
   margin-top: 5.5rem;
 
   .img-container {
     @include img-containerFullWidth;
+
+    overflow: hidden;
+    img:hover {
+      transform: scale(1.04);
+      transition: transform 0.5s ease-in;
+    }
   }
   .mask-element {
     margin-top: 1.3rem;
@@ -17,5 +24,42 @@
   }
   p {
     max-width: 95%;
+  }
+}
+
+@include responsive(vars.$tablet) {
+  .section-1 {
+    @include flex-row;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    & > div:first-child {
+      width: 180%;
+    }
+
+    h2 {
+      width: 70%;
+    }
+
+    p {
+      max-width: 80%;
+      width: 80%;
+    }
+  }
+}
+
+@include responsive(vars.$desktop) {
+  .section-1 {
+    & > div:first-child {
+      width: 120%;
+      // max-height: 10rem;
+
+      img {
+        height: 25em;
+        max-height: 100%;
+        width: 100%;
+        // object-fit: fill;
+      }
+    }
   }
 }

@@ -14,3 +14,9 @@
   display: flex;
   flex-direction: row;
 }
+
+@mixin responsive($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

@@ -77,3 +77,12 @@ button {
   font-family: "Big Shoulders Display", sans sans-serif;
   text-transform: uppercase;
 }
+
+.mask-element {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  // * {
+  //   transform: translateY(-150%);
+  // }
+}

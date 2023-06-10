@@ -1,0 +1,35 @@
+@use "../../../Ui-styles/mixins" as *;
+@use "../../../Ui-styles/variables" as vars;
+
+.ourLocation {
+  position: relative;
+  height: 50vh;
+
+  .button {
+    position: absolute;
+    top: 10%;
+    z-index: 2;
+  }
+
+  .sidebar {
+    background-color: rgba(35, 55, 75, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 12px;
+    border-radius: 4px;
+  }
+}
+
+@include responsive(vars.$tablet) {
+  .ourLocation {
+    .button {
+      top: 0%;
+      left: 5%;
+    }
+  }
+}
